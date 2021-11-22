@@ -1,3 +1,8 @@
+TIENDA DE ROPA
+Newen Brand - La Fuerza de la Naturaleza
+
+Proyecto e-commerce React Js - Dardo Andres Lopez.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
