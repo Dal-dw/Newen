@@ -1,15 +1,14 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 
-import { ThemeProvider } from "@material-ui/core/styles";
-import theme from "./temaConfig";
-import Contenedor from "./Components/Contenedor";
+import Main from "./Components/Main";
+import NaviBar from "./Components/NaviBar";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Contenedor />
-    </ThemeProvider>
+    <div>
+      <NaviBar />
+      <Main />
+    </div>
   );
 }
 
