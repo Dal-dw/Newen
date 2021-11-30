@@ -3,7 +3,7 @@ import remera1 from "../img/remera1.png";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-export default function ProductCard({ stock, initial, stockInicial }) {
+export default function ProductCard({ initial, stockInicial }) {
   const [itemCount, setItemCount] = useState(initial);
   const [stockCount, setStockCount] = useState(stockInicial - 1);
 

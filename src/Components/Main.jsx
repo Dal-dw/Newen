@@ -6,8 +6,8 @@ export default function Main() {
   return (
     <div className="d-flex  p-3 bd-highlight ">
       <div className="d-flex  col-9 mx-1">
-        <ProductCard stock={20} initial={1} stockInicial={20} />
-        <ProductCard stock={15} initial={1} stockInicial={15} />
+        <ProductCard initial={1} stockInicial={20} />
+        <ProductCard initial={1} stockInicial={15} />
       </div>
       <div className="bg-light col-3  ">
         {" "}
