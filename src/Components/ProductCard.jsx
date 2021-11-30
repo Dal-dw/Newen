@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import remera1 from "../img/remera1.png";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-export default function ProductCard({ stock, initial }) {
+export default function ProductCard({ stock, initial, stockInicial }) {
   const [itemCount, setItemCount] = useState(initial);
+  const [stockCount, setStockCount] = useState(stockInicial - 1);
 
   const updateItem = () => {
-    if (itemCount < stock) {
+    if (itemCount < stockInicial) {
       setItemCount(itemCount + 1);
+      setStockCount(stockCount - 1);
     }
   };
   const removeItem = () => {
     if (itemCount > 0) {
       setItemCount(itemCount - 1);
+      setStockCount(stockCount + 1);
     }
   };
 
@@ -33,7 +36,7 @@ export default function ProductCard({ stock, initial }) {
               +
             </button>
           </div>
-          <span>Disponibles {stock}</span>
+          <span>Disponibles {stockCount}</span>
           <Button variant="success" className="col-12">
             Agregar
           </Button>
