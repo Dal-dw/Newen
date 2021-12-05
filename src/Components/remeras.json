@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "nombre": "Volcan",
+    "color": "Azul Marino",
+    "precio": 2290.0,
+    "img": "volcan.png",
+    "stock": 20,
+    "added": 0
+  },
+  {
+    "id": 2,
+    "nombre": "Zorrito",
+    "color": "Arena",
+    "precio": 2290.0,
+    "img": "zorrito.png",
+    "stock": 26,
+    "added": 1
+  },
+  {
+    "id": 3,
+    "nombre": "Flor",
+    "color": "Bordo",
+    "precio": 2290.0,
+    "img": "flor.png",
+    "stock": 32,
+    "added": 0
+  },
+  {
+    "id": 4,
+    "nombre": "Cuarzo",
+    "color": "Negro",
+    "precio": 2290.0,
+    "img": "cuarzo.png",
+    "stock": 16,
+    "added": 0
+  },
+  {
+    "id": 5,
+    "nombre": "Ballena",
+    "color": "Adoquin",
+    "precio": 2290.0,
+    "img": "ballena.png",
+    "stock": 25,
+    "added": 0
+  },
+  {
+    "id": 6,
+    "nombre": "Ocaso",
+    "color": "Melange 25%",
+    "precio": 2290.0,
+    "img": "ocaso.png",
+    "stock": 19,
+    "added": 0
+  },
+  {
+    "id": 7,
+    "nombre": "Bici",
+    "color": "Sprite",
+    "precio": 2290.0,
+    "img": "bici.png",
+    "stock": 32,
+    "added": 0
+  },
+  {
+    "id": 8,
+    "nombre": "Deshielo",
+    "color": "Celeste Suave",
+    "precio": 2290.0,
+    "img": "deshielo.png",
+    "stock": 15,
+    "added": 0
+  },
+  {
+    "id": 9,
+    "nombre": "Pinos",
+    "color": "Militar",
+    "precio": 2290.0,
+    "img": "pinos.png",
+    "stock": 6,
+    "added": 0
+  },
+  {
+    "id": 10,
+    "nombre": "Ola",
+    "color": "Azul Francia",
+    "precio": 2290.0,
+    "img": "ola.png",
+    "stock": 9,
+    "added": 0
+  },
+  {
+    "id": 11,
+    "nombre": "Amanecer",
+    "color": "Bordó",
+    "precio": 2290.0,
+    "img": "amanecer.png",
+    "stock": 27,
+    "added": 0
+  },
+  {
+    "id": 12,
+    "nombre": "Planta",
+    "color": "Militar",
+    "precio": 2290.0,
+    "img": "planta.png",
+    "stock": 15,
+    "added": 0
+  },
+  {
+    "id": 13,
+    "nombre": "Sol",
+    "color": "Rosa",
+    "precio": 2290.0,
+    "img": "sol.png",
+    "stock": 14,
+    "added": 0
+  },
+  {
+    "id": 14,
+    "nombre": "Hoja",
+    "color": "Militar Melangino",
+    "precio": 2290.0,
+    "img": "hoja.png",
+    "stock": 12,
+    "added": 0
+  },
+  {
+    "id": 15,
+    "nombre": "Atardecer",
+    "color": "Melange 5%",
+    "precio": 2290.0,
+    "img": "atardecer.png",
+    "stock": 17,
+    "added": 0
+  },
+  {
+    "id": 16,
+    "nombre": "Ciervo",
+    "color": "Crudo",
+    "precio": 2290.0,
+    "img": "ciervo.png",
+    "stock": 18,
+    "added": 0
+  }
+]

@@ -59,7 +59,7 @@ export default function NaviBar() {
             </Form>
           </Navbar.Collapse>
         </Container>
-        <CartWidget cantidad="10" />
+        <CartWidget cantidade="10" />
       </Navbar>
     </div>
   );
