@@ -1,13 +1,13 @@
 import React from "react";
 
-import Main from "./Components/Main";
+import ItemList from "./Components/ItemList";
 import NaviBar from "./Components/NaviBar";
 
 function App() {
   return (
     <div>
       <NaviBar />
-      <Main />
+      <ItemList />
     </div>
   );
 }

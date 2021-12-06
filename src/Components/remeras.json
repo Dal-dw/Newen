@@ -6,7 +6,7 @@
     "precio": 2290.0,
     "img": "volcan.png",
     "stock": 20,
-    "added": 0
+    "added": 1
   },
   {
     "id": 2,
@@ -24,7 +24,7 @@
     "precio": 2290.0,
     "img": "flor.png",
     "stock": 32,
-    "added": 0
+    "added": 1
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "precio": 2290.0,
     "img": "cuarzo.png",
     "stock": 16,
-    "added": 0
+    "added": 1
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "precio": 2290.0,
     "img": "ballena.png",
     "stock": 25,
-    "added": 0
+    "added": 1
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "precio": 2290.0,
     "img": "ocaso.png",
     "stock": 19,
-    "added": 0
+    "added": 1
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "precio": 2290.0,
     "img": "bici.png",
     "stock": 32,
-    "added": 0
+    "added": 1
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "precio": 2290.0,
     "img": "deshielo.png",
     "stock": 15,
-    "added": 0
+    "added": 1
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "precio": 2290.0,
     "img": "pinos.png",
     "stock": 6,
-    "added": 0
+    "added": 1
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "precio": 2290.0,
     "img": "ola.png",
     "stock": 9,
-    "added": 0
+    "added": 1
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "precio": 2290.0,
     "img": "amanecer.png",
     "stock": 27,
-    "added": 0
+    "added": 1
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "precio": 2290.0,
     "img": "planta.png",
     "stock": 15,
-    "added": 0
+    "added": 1
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "precio": 2290.0,
     "img": "sol.png",
     "stock": 14,
-    "added": 0
+    "added": 1
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "precio": 2290.0,
     "img": "hoja.png",
     "stock": 12,
-    "added": 0
+    "added": 1
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "precio": 2290.0,
     "img": "atardecer.png",
     "stock": 17,
-    "added": 0
+    "added": 1
   },
   {
     "id": 16,
@@ -141,6 +141,6 @@
     "precio": 2290.0,
     "img": "ciervo.png",
     "stock": 18,
-    "added": 0
+    "added": 1
   }
 ]

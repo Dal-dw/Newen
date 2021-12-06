@@ -23,6 +23,13 @@ export default function ProductCard(props) {
   };
   const agregar = () => {
     console.log(props);
+    var botonAgregar = document.getElementById(`botonAgregar + ${props.id}`);
+    var botonMas = document.getElementById(`botonMas + ${props.id}`);
+    var botonMenos = document.getElementById(`botonMenos + ${props.id}`);
+
+    botonAgregar.setAttribute("disabled", "");
+    botonMas.setAttribute("disabled", "");
+    botonMenos.setAttribute("disabled", "");
   };
 
   //----------RETURN-------
@@ -43,20 +50,29 @@ export default function ProductCard(props) {
             <Card.Text> {props.color} </Card.Text>
             <Card.Title> ${props.precio} </Card.Title>
             <div className="d-flex p-3 bd-highlight justify-content-around">
-              <button className="btn btn-secondary" onClick={removeItem}>
+              <button
+                className="btn btn-secondary boton"
+                onClick={removeItem}
+                id={`botonMenos + ${props.id}`}
+              >
                 -
               </button>
               <span>{itemCount}</span>
               <button
-                className="btn btn-success"
+                className="btn btn-success boton"
                 onClick={updateItem}
-                id={props.id}
+                id={`botonMas + ${props.id}`}
               >
                 +
               </button>
             </div>
             <span>Disponibles {stockCount}</span>
-            <Button variant="success" className="col-12 my-2" onClick={agregar}>
+            <Button
+              variant="success"
+              id={`botonAgregar + ${props.id}`}
+              className="col-12 my-2 boton"
+              onClick={agregar}
+            >
               Agregar
             </Button>
           </Card.Body>

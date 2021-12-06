@@ -1,33 +1,20 @@
 import React, { useState, useEffect } from "react";
-import ItemListContainer from "./ItemListContainer";
-import ProductCard from "./ProductCard";
-import DataProducts from "../Components/remeras.json";
+import ItemListContainer from "./Cart";
+import ProductCard from "./Item";
+import DataProducts from "./remeras.json";
 
 export default function Main() {
   const [products, setProducts] = useState([]);
-  //let [itemCount, setItemCount] = useState(products.added);
 
-  //let [stockCount, setStockCount] = useState(products.stock);
-
-  /* const updateItem = (id) => {
-    itemCount < stockCount
-      ? setItemCount(itemCount + 1)
-      : setStockCount(stockCount - 1);
-  };
-  console.log(itemCount);
-  const removeItem = (id) => {
-    if (itemCount > 0) {
-      setItemCount(itemCount - 1);
-      setStockCount(stockCount + 1);
-    }
-  }; */
   const useProducts = new Promise((resolve) => {
     resolve(DataProducts);
   });
 
   useEffect(() => {
     useProducts.then((data) => {
-      setProducts(data);
+      setTimeout(() => {
+        setProducts(data);
+      }, 2000);
     });
   });
   return (
@@ -54,6 +41,7 @@ export default function Main() {
           );
         })}
       </div>
+      {/* Esto lo debería transformar en un componente individual e importarlo en App. */}
       <div className="bg-light  col-sm-5 col-md-3 col-lg-3 my-3 ">
         <ItemListContainer greeting="Este es el greeting" />
       </div>
