@@ -1,13 +1,10 @@
 import React from "react";
-
-import ItemList from "./Components/ItemList";
-import NaviBar from "./Components/NaviBar";
+import AppRouter from "./Components/AppRouter";
 
 function App() {
   return (
     <div>
-      <NaviBar />
-      <ItemList />
+      <AppRouter />
     </div>
   );
 }

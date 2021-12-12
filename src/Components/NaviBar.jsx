@@ -8,25 +8,30 @@ import Button from "react-bootstrap/Button";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../img/logo.png";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 export default function NaviBar() {
   return (
     <div>
       <Navbar bg="primary" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src={logo}
-              width="100%"
-              height="100"
-              className="d-inline-block  bg-white p-1 "
-            />
-          </Navbar.Brand>
-          <Navbar.Brand href="#3" className="font-weight-bold ">
-            Newen Brand
-          </Navbar.Brand>
+          <Link to={`/`}>
+            <div className="navbar-brand p-3 ">
+              <img
+                alt=""
+                src={logo}
+                width="110%"
+                height="110"
+                className="d-inline-block  bg-white p-1  "
+              />
+            </div>
+          </Link>
 
+          <Link to="/" className="text-decoration-none text-light">
+            <Navbar.Brand className="font-weight-bold  text-decoration-none text-light ">
+              Newen Brand
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="navbar" />
           <Navbar.Collapse id="navbar">
             <Nav
@@ -34,11 +39,26 @@ export default function NaviBar() {
               style={{ maxHeight: "300" }}
               navbar
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-
               <NavDropdown title="Productos" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Remeras</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Gorras</NavDropdown.Item>
+                <ul>
+                  <li>
+                    <Link
+                      to="/remeras"
+                      className="text-decoration-none text-dark"
+                    >
+                      Remeras
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/gorras"
+                      className="text-decoration-none text-dark "
+                    >
+                      Gorras
+                    </Link>
+                  </li>
+                </ul>
+
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
                   Tabla de Talles
