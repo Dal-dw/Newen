@@ -27,7 +27,6 @@ export default function ItemList(props) {
             product.categoria === props.filter ||
             product.destacado === props.destacado
           ) {
-            console.log(product);
             return (
               <div
                 className="col-sm-12 col-md-6 col-xl-4   bd-highlight"
@@ -49,7 +48,7 @@ export default function ItemList(props) {
           }
         })}
       </div>
-      <Cart />;
+      <Cart />
     </div>
   );
 }

@@ -1,37 +1,14 @@
-import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import { ListGroupItem } from "react-bootstrap";
 import { ListGroup } from "react-bootstrap";
+import { ItemCount } from "./ItemCount";
 
 export default function ItemDetail({ data }) {
-  let [itemCount, setItemCount] = useState(1);
+  const onAdd = (value) => {};
 
-  let [stockCount, setStockCount] = useState(data.stock);
-  console.log(stockCount);
-
-  const updateItem = () => {
-    if (itemCount < data.stock) {
-      setItemCount(itemCount + 1);
-      setStockCount(stockCount - 1);
-    }
-  };
-
-  const removeItem = () => {
-    if (itemCount > 1) {
-      setItemCount(itemCount - 1);
-      setStockCount(stockCount + 1);
-    }
-  };
   const agregar = () => {
     console.log(data);
-    var botonAgregar = document.getElementById("botonAgregar");
-    var botonMas = document.getElementById("botonMas");
-    var botonMenos = document.getElementById("botonMenos");
-
-    botonAgregar.setAttribute("disabled", "");
-    botonMas.setAttribute("disabled", "");
-    botonMenos.setAttribute("disabled", "");
   };
   //-------------------RETURN
 
@@ -53,25 +30,7 @@ export default function ItemDetail({ data }) {
           </ListGroup>
         </Card.Body>
         <Card.Body className="container col-5 text-center">
-          <div className="d-flex p-3 bd-highlight justify-content-around">
-            <button
-              className="btn btn-secondary boton"
-              onClick={removeItem}
-              id={"botonMenos"}
-            >
-              -
-            </button>
-            <span className="m-3">{itemCount}</span>
-
-            <button
-              className="btn btn-success boton"
-              onClick={updateItem}
-              id={"botonMas"}
-            >
-              +
-            </button>
-          </div>
-
+          <ItemCount data={data} onAdd={onAdd} />
           <Button
             variant="success"
             id={"botonAgregar"}
@@ -80,7 +39,6 @@ export default function ItemDetail({ data }) {
           >
             Agregar
           </Button>
-          <span className="m-3">{stockCount}</span>
         </Card.Body>
 
         <Card.Body>

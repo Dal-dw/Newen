@@ -43,7 +43,7 @@ export default function NaviBar() {
                 <ul>
                   <li>
                     <Link
-                      to="/remeras"
+                      to="/productos/remeras"
                       className="text-decoration-none text-dark"
                     >
                       Remeras
@@ -51,7 +51,7 @@ export default function NaviBar() {
                   </li>
                   <li>
                     <Link
-                      to="/gorras"
+                      to="/productos/gorras"
                       className="text-decoration-none text-dark "
                     >
                       Gorras

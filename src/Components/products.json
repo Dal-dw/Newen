@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1,
+    "categoria": "remeras",
+    "nombre": "Volcan",
+    "color": "Azul Marino",
+    "precio": 229000.0,
+    "img": "/remeras/volcan.png",
+    "stock": 20,
+    "added": 1,
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "categoria": "remeras",
+    "nombre": "Zorrito",
+    "color": "Arena",
+    "precio": 2290.0,
+    "img": "/remeras/zorrito.png",
+    "stock": 26,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 3,
+    "categoria": "remeras",
+    "nombre": "Flor",
+    "color": "Bordo",
+    "precio": 2290.0,
+    "img": "/remeras/flor.png",
+    "stock": 32,
+    "added": 1,
+    "destacado": true
+  },
+  {
+    "id": 4,
+    "categoria": "remeras",
+    "nombre": "Cuarzo",
+    "color": "Negro",
+    "precio": 2290.0,
+    "img": "/remeras/cuarzo.png",
+    "stock": 16,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 5,
+    "categoria": "remeras",
+    "nombre": "Ballena",
+    "color": "Adoquin",
+    "precio": 2290.0,
+    "img": "/remeras/ballena.png",
+    "stock": 25,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 6,
+    "categoria": "remeras",
+    "nombre": "Ocaso",
+    "color": "Melange 25%",
+    "precio": 2290.0,
+    "img": "/remeras/ocaso.png",
+    "stock": 19,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 7,
+    "categoria": "remeras",
+    "nombre": "Bici",
+    "color": "Sprite",
+    "precio": 2290.0,
+    "img": "/remeras/bici.png",
+    "stock": 32,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 8,
+    "categoria": "remeras",
+    "nombre": "Deshielo",
+    "color": "Celeste Suave",
+    "precio": 2290.0,
+    "img": "/remeras/deshielo.png",
+    "stock": 15,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 9,
+    "categoria": "remeras",
+    "nombre": "Pinos",
+    "color": "Militar",
+    "precio": 2290.0,
+    "img": "/remeras/pinos.png",
+    "stock": 6,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 10,
+    "categoria": "remeras",
+    "nombre": "Ola",
+    "color": "Azul Francia",
+    "precio": 2290.0,
+    "img": "/remeras/ola.png",
+    "stock": 9,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 11,
+    "categoria": "remeras",
+    "nombre": "Amanecer",
+    "color": "Bordó",
+    "precio": 2290.0,
+    "img": "/remeras/amanecer.png",
+    "stock": 27,
+    "added": 1,
+    "destacado": true
+  },
+  {
+    "id": 12,
+    "categoria": "remeras",
+    "nombre": "Planta",
+    "color": "Militar",
+    "precio": 2290.0,
+    "img": "/remeras/planta.png",
+    "stock": 15,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 13,
+    "categoria": "remeras",
+    "nombre": "Sol",
+    "color": "Rosa",
+    "precio": 2290.0,
+    "img": "/remeras/sol.png",
+    "stock": 14,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 14,
+    "categoria": "remeras",
+    "nombre": "Hoja",
+    "color": "Militar Melangino",
+    "precio": 2290.0,
+    "img": "/remeras/hoja.png",
+    "stock": 12,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 15,
+    "categoria": "remeras",
+    "nombre": "Atardecer",
+    "color": "Melange 5%",
+    "precio": 2290.0,
+    "img": "/remeras/atardecer.png",
+    "stock": 17,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 16,
+    "categoria": "remeras",
+    "nombre": "Ciervo",
+    "color": "Crudo",
+    "precio": 2290.0,
+    "img": "/remeras/ciervo.png",
+    "stock": 18,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 17,
+    "categoria": "gorras",
+    "nombre": "Volcan",
+    "color": "Azul Marino",
+    "precio": 2390.0,
+    "img": "/gorras/volcan.jpg",
+    "stock": 20,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 18,
+    "categoria": "gorras",
+    "nombre": "Zorro",
+    "color": "Arena",
+    "precio": 2390.0,
+    "img": "/gorras/zorro.png",
+    "stock": 21,
+    "added": 1,
+    "destacado": false
+  },
+  {
+    "id": 19,
+    "categoria": "gorras",
+    "nombre": "Flor",
+    "color": "Bordo",
+    "precio": 2390.0,
+    "img": "/gorras/flor.png",
+    "stock": 11,
+    "added": 1,
+    "destacado": true
+  },
+
+  {
+    "id": 20,
+    "categoria": "gorras",
+    "nombre": "Ballena",
+    "color": "Adoquin",
+    "precio": 2390.0,
+    "img": "/gorras/ballena.jpg",
+    "stock": 22,
+    "added": 1,
+    "destacado": true
+  },
+
+  {
+    "id": 21,
+    "categoria": "gorras",
+    "nombre": "Ola",
+    "color": "Azul Francia",
+    "precio": 2390.0,
+    "img": "/gorras/ola.jpg",
+    "stock": 12,
+    "added": 1,
+    "destacado": true
+  },
+
+  {
+    "id": 22,
+    "categoria": "gorras",
+    "nombre": "Plantas",
+    "color": "Turquesa",
+    "precio": 2390.0,
+    "img": "/gorras/plantas.jpg",
+    "stock": 15,
+    "added": 1,
+    "destacado": false
+  }
+]

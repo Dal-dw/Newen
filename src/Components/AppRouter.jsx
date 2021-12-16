@@ -12,8 +12,14 @@ export default function AppRouter() {
     <BrowserRouter>
       <NaviBar />
       <Routes>
-        <Route path="/remeras" element={<ItemList filter="Remeras" />} />
-        <Route path="/gorras" element={<ItemList filter="Gorras" />} />
+        <Route
+          path="/productos/remeras"
+          element={<ItemList filter="Remeras" />}
+        />
+        <Route
+          path="/productos/gorras"
+          element={<ItemList filter="Gorras" />}
+        />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/:id" element={<ItemDetailContainer />} />
