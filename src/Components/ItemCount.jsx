@@ -21,18 +21,22 @@ export const ItemCount = ({ data, onAdd }) => {
     <div>
       <div className="d-flex p-3 bd-highlight justify-content-around">
         <button
-          className="btn btn-secondary boton"
+          className="btn btn-secondary  boton"
           onClick={removeItem}
           id={"botonMenos"}
+          style={{ height: "50px" }}
         >
           -
         </button>
-        <span className="m-3">{itemCount}</span>
+        <span className="m-2" style={{ height: "50px" }}>
+          <b>{itemCount}</b>
+        </span>
 
         <button
           className="btn btn-success boton"
           onClick={updateItem}
           id={"botonMas"}
+          style={{ height: "50px" }}
         >
           +
         </button>

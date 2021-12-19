@@ -1,16 +1,17 @@
 import React from "react";
 
-export default function Cart(props) {
+export default function Cart() {
+  const cartContain = [];
   return (
-    <div className="bg-light  col-sm-5 col-md-3 col-lg-3 my-3 d-none">
-      <aside>
-        <div className="container text-center ">
-          <h5>Lista de compra</h5>
-        </div>
+    <div className="container bg-info bg-opacity-25 text-dark text-center  col-sm-5 col-md-3 col-lg-12 my-3 ">
+      <div className="container text-center text-light">
+        <h3>Lista de compra</h3>
+
+        <h5>Cart Items</h5>
         <ul>
-          <li>{props.greeting}</li>
+          <li>{cartContain}</li>
         </ul>
-      </aside>
+      </div>
     </div>
   );
 }

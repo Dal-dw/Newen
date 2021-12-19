@@ -13,15 +13,20 @@ import { Link } from "react-router-dom";
 export default function NaviBar() {
   return (
     <div>
-      <Navbar bg="primary" expand="lg" variant="dark">
+      <Navbar
+        bg="primary"
+        expand="lg"
+        variant="dark"
+        className="border border-secondary bg-opacity-50"
+      >
         <Container fluid>
           <Link to={`/`}>
-            <div className="navbar-brand p-3 ">
+            <div className="navbar-brand p-2 ">
               <img
                 alt=""
                 src={logo}
                 width="110%"
-                height="110"
+                height="100"
                 className="d-inline-block  bg-white p-1  "
               />
             </div>
@@ -79,7 +84,9 @@ export default function NaviBar() {
             </Form>
           </Navbar.Collapse>
         </Container>
-        <CartWidget cantidade="10" />
+        <Link to="/cart">
+          <CartWidget cantidade="10" />
+        </Link>
       </Navbar>
     </div>
   );
