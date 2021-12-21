@@ -6,23 +6,28 @@ import { ListGroup } from "react-bootstrap";
 import { ItemCount } from "./ItemCount";
 import { Link } from "react-router-dom";
 import Cart from "./Cart";
+import GoToCart from "./GoToCart";
 
 export default function ItemDetail({ data }) {
-  const [itemCart, setItemCart] = useState([
-    {
-      name: data.nombre,
-      amount: 0,
-      img: `${process.env.PUBLIC_URL}/img/${data.img}`,
-      price: data.precio,
-    },
-  ]);
+  const [toggleButton, setToggleButton] = useState(false);
+  const [itemCart, setItemCart] = useState({
+    name: data.nombre,
+    amount: 0,
+    added: 0,
+    img: `${process.env.PUBLIC_URL}/img/${data.img}`,
+    price: data.precio,
+  });
 
   const onAdd = (value) => {
     itemCart.amount = value;
   };
 
   const agregar = () => {
+    itemCart.name = data.nombre;
+    itemCart.price = data.precio;
+    itemCart.added = itemCart.amount;
     console.log(itemCart);
+    setToggleButton(true);
   };
   //-------------------RETURN
 
@@ -57,9 +62,10 @@ export default function ItemDetail({ data }) {
             </ListGroup>
           </Card.Body>
           <Card.Body className="container col-5 text-center">
-            <div>
-              <ItemCount data={data} onAdd={onAdd} />
-              <Link className="text-decoration-none" to="/cart">
+            {console.log("hola", itemCart.added)}
+            {toggleButton === false ? (
+              <div>
+                <ItemCount data={data} onAdd={onAdd} />
                 <Button
                   variant="success"
                   id={"botonAgregar"}
@@ -68,12 +74,14 @@ export default function ItemDetail({ data }) {
                 >
                   Agregar
                 </Button>
-              </Link>
-            </div>
+              </div>
+            ) : (
+              <GoToCart />
+            )}
           </Card.Body>
         </div>
       </Card>
-      <div className="display-none">
+      <div className="d-none">
         <Cart />
       </div>
     </div>

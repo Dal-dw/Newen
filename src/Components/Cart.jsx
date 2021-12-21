@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   const cartContain = [];
@@ -12,6 +13,7 @@ export default function Cart() {
           <li>{cartContain}</li>
         </ul>
       </div>
+      <Link to="/">Seguir comprando</Link>
     </div>
   );
 }
