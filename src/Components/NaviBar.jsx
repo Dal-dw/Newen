@@ -84,7 +84,7 @@ export default function NaviBar() {
             </Form>
           </Navbar.Collapse>
         </Container>
-        <Link to="/cart">
+        <Link className=" text-decoration-none" to="/cart">
           <CartWidget cantidade="10" />
         </Link>
       </Navbar>
