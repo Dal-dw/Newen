@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import { ListGroupItem } from "react-bootstrap";
@@ -7,27 +7,32 @@ import { ItemCount } from "./ItemCount";
 import { Link } from "react-router-dom";
 import Cart from "./Cart";
 import GoToCart from "./GoToCart";
+import CartContext from "../context/CartContext";
 
 export default function ItemDetail({ data }) {
   const [toggleButton, setToggleButton] = useState(false);
+  //console.log("data item: ", data);
+
   const [itemCart, setItemCart] = useState({
+    id: data.id,
     name: data.nombre,
-    amount: 0,
-    added: 0,
-    img: `${process.env.PUBLIC_URL}/img/${data.img}`,
+    amount: 1,
+    added: 1,
+    img: data.img,
     price: data.precio,
   });
+  //console.log("data item2: ", itemCart);
+  const { addProducts, products } = useContext(CartContext);
 
   const onAdd = (value) => {
     itemCart.amount = value;
   };
 
   const agregar = () => {
-    itemCart.name = data.nombre;
-    itemCart.price = data.precio;
-    itemCart.added = itemCart.amount;
-    console.log(itemCart);
-    setToggleButton(true);
+    //setToggleButton(true);
+
+    addProducts(itemCart);
+    console.log("agregar", itemCart);
   };
   //-------------------RETURN
 
@@ -41,7 +46,7 @@ export default function ItemDetail({ data }) {
           Volver
         </button>
       </Link>
-      <Card className="d-flex p-2  flex-row   ">
+      <Card className="d-flex p-2  flex-row   " key={data.id}>
         <Card.Img
           className="border bg-light bg-opacity-10   p-4"
           style={{ width: "100%" }}
@@ -62,7 +67,6 @@ export default function ItemDetail({ data }) {
             </ListGroup>
           </Card.Body>
           <Card.Body className="container col-5 text-center">
-            {console.log("hola", itemCart.added)}
             {toggleButton === false ? (
               <div>
                 <ItemCount data={data} onAdd={onAdd} />
@@ -72,7 +76,7 @@ export default function ItemDetail({ data }) {
                   className=" d-flex col-12 justify-content-center p-2   boton"
                   onClick={agregar}
                 >
-                  Agregar
+                  Agregar{data.id}
                 </Button>
               </div>
             ) : (

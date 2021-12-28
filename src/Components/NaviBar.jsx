@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -7,14 +7,19 @@ import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../img/logo.png";
-import CartWidget from "./CartWidget";
+
 import { Link } from "react-router-dom";
+import ModalCart from "./ModalCart";
+import ThemeContext from "../context/ThemeContext";
+import SwitchTheme from "./SwitchTheme";
 
 export default function NaviBar() {
+  const { theme, changeTheme } = useContext(ThemeContext);
+
   return (
     <div>
       <Navbar
-        bg="primary"
+        bg={theme === false ? "primary" : "dark"}
         expand="lg"
         variant="dark"
         className="border border-secondary bg-opacity-50"
@@ -72,21 +77,11 @@ export default function NaviBar() {
               <Nav.Link href="#">Como comprar</Nav.Link>
               <Nav.Link href="#2">Quienes somos</Nav.Link>
             </Nav>
-
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Buscar"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="secondary">Buscar</Button>
-            </Form>
           </Navbar.Collapse>
         </Container>
-        <Link className=" text-decoration-none" to="/cart">
-          <CartWidget cantidade="10" />
-        </Link>
+
+        <SwitchTheme changeTheme={changeTheme} />
+        <ModalCart />
       </Navbar>
     </div>
   );

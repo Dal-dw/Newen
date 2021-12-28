@@ -19,7 +19,9 @@ export default function Item(props) {
               src={`${process.env.PUBLIC_URL}/img/${props.img}`}
               alt="img"
             />
-            <Card.Title>{props.nombre}</Card.Title>
+            <Card.Title className="text-secondary my-1">
+              {props.nombre}
+            </Card.Title>
             <Card.Text> {props.color} </Card.Text>
             <Card.Title> ${props.precio} </Card.Title>
 

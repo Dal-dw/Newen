@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 //import Cart from "./Cart";
 import ProductCard from "./Item";
 import Loading from "./Loading";
 import DataProducts from "./products.json";
-
+//import { useParams } from "react-router-dom";
 import gorras from "../img/portadaGorras.jpg";
+import remeras from "../img/portadaRemeras.jpg";
+import ThemeContext from "../context/ThemeContext";
 
 export default function ItemList(props) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { theme, changeTheme } = useContext(ThemeContext);
 
   const getProducts = new Promise((resolve) => {
     setTimeout(() => {
@@ -33,10 +36,20 @@ export default function ItemList(props) {
   } else {
     return (
       <>
-        <div className="w-100">
-          <img className="w-100" src={gorras} alt="" />
+        <div className="w-100 ">
+          {props.filter === "Gorras" ? (
+            <img className="w-100" src={gorras} alt="" />
+          ) : (
+            <img className="w-100" src={remeras} alt="" />
+          )}
         </div>
-        <div className="d-flex justify-content-center">
+        <div
+          className={
+            theme === false
+              ? "d-flex justify-content-center"
+              : "d-flex justify-content-center bg-dark"
+          }
+        >
           <div className="container row ">
             {products.map((product) => {
               if (
