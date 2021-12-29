@@ -8,10 +8,11 @@ import { Link } from "react-router-dom";
 import Cart from "./Cart";
 import GoToCart from "./GoToCart";
 import CartContext from "../context/CartContext";
+import { useParams } from "react-router-dom";
 
 export default function ItemDetail({ data }) {
   const [toggleButton, setToggleButton] = useState(false);
-  //console.log("data item: ", data);
+  const { id } = useParams();
 
   const [itemCart, setItemCart] = useState({
     id: data.id,
@@ -21,7 +22,7 @@ export default function ItemDetail({ data }) {
     img: data.img,
     price: data.precio,
   });
-  //console.log("data item2: ", itemCart);
+  console.log("amount: ", itemCart.amount);
   const { addProducts, products } = useContext(CartContext);
 
   const onAdd = (value) => {
@@ -29,11 +30,11 @@ export default function ItemDetail({ data }) {
   };
 
   const agregar = () => {
-    //setToggleButton(true);
-
     addProducts(itemCart);
-    console.log("agregar", itemCart);
+
+    itemCart.id ? setToggleButton(true) : setToggleButton(false);
   };
+
   //-------------------RETURN
 
   return (
@@ -76,7 +77,7 @@ export default function ItemDetail({ data }) {
                   className=" d-flex col-12 justify-content-center p-2   boton"
                   onClick={agregar}
                 >
-                  Agregar{data.id}
+                  Agregar
                 </Button>
               </div>
             ) : (

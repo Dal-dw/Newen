@@ -34,10 +34,11 @@ export default function ModalCart() {
         <Modal.Header closeButton>
           <Modal.Title>Carrito de Compras</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          {products.length === 0 ? (
-            <h2 className="text-center">Carrito Vacío :(</h2>
-          ) : (
+
+        {products.length === 0 ? (
+          <h2 className="text-center p-3">Carrito Vacío :(</h2>
+        ) : (
+          <Modal.Body>
             <Table hover className="text-center fw-bold">
               <thead>
                 <tr>
@@ -100,19 +101,20 @@ export default function ModalCart() {
                 </tr>
               </tbody>
             </Table>
-          )}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Seguir Comprando
-          </Button>
 
-          <Link to="/cart">
-            <Button variant="success" onClick={handleClose}>
-              Finalizar Compra
-            </Button>
-          </Link>
-        </Modal.Footer>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Seguir Comprando
+              </Button>
+
+              <Link to="/cart">
+                <Button variant="success" onClick={handleClose}>
+                  Finalizar Compra
+                </Button>
+              </Link>
+            </Modal.Footer>
+          </Modal.Body>
+        )}
       </Modal>
     </>
   );
