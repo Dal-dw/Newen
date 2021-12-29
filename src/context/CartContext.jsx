@@ -4,7 +4,6 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const [tPrice, setTPrice] = useState(0);
 
   const addProducts = (product) => {
     const exist = products.find((x) => x.id === product.id);
@@ -12,7 +11,10 @@ const CartProvider = ({ children }) => {
       setProducts(
         products.map((x) =>
           x.id === product.id
-            ? { ...exist, amount: (exist.amount = product.amount) }
+            ? {
+                ...exist,
+                amount: (exist.amount = product.amount),
+              }
             : x
         )
       );
@@ -21,13 +23,12 @@ const CartProvider = ({ children }) => {
     } else {
       setProducts([...products, { ...product, amount: product.amount }]);
     }
-    setTPrice(product.price * product.amount);
   };
 
   const data = {
     products,
     addProducts,
-    tPrice,
+
     setProducts,
   };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

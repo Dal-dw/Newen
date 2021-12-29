@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 export default function Cart() {
   const [show, setShow] = useState(false);
 
-  const { products, setProducts, tPrice } = useContext(CartContext);
+  const { products, setProducts } = useContext(CartContext);
+  const totalPrice = products.reduce((a, c) => a + c.price * c.amount, 0);
 
   const removeItem = (event) => {
     console.log(event.target.id);
@@ -85,9 +86,7 @@ export default function Cart() {
                 <td></td>
                 <td>
                   <h5 className="my-2 text-secondary">PRECIO TOTAL</h5>
-                  <h4 className="my-1 text-secondary">
-                    ${tPrice}(Todavia no suma bien)
-                  </h4>
+                  <h4 className="my-1 text-secondary">${totalPrice}</h4>
                 </td>
               </tr>
               <tr>
