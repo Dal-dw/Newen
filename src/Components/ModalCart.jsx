@@ -12,13 +12,9 @@ export default function ModalCart() {
   const handleShow = () => setShow(true);
   const { products, setProducts, tPrice } = useContext(CartContext);
 
-  const removeItem = (event) => {
-    console.log(event.target.id);
-    const deleted = products.filter(
-      (product) => product.id !== parseInt(event.target.id)
-    );
-    setProducts(deleted);
-    console.log(products);
+  const removeItem = (id) => {
+    const newCart = products.filter((product) => product.id !== id);
+    setProducts(newCart);
   };
   const clearCart = () => {
     setProducts([]);
@@ -74,7 +70,7 @@ export default function ModalCart() {
                         <button
                           id={product.id}
                           className="btn btn-md btn btn-outline-primary  p-2 text-secondary"
-                          onClick={removeItem}
+                          onClick={() => removeItem(product.id)}
                         >
                           <i className="fas fa-trash-alt "></i>
                         </button>
