@@ -11,6 +11,7 @@ export default function ModalCart() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { products, setProducts } = useContext(CartContext);
+  console.log("xxxxxxxxxxx", products);
 
   const totalPrice = products.reduce((a, c) => a + c.price * c.amount, 0);
 
@@ -42,7 +43,6 @@ export default function ModalCart() {
             <Table hover className="text-center fw-bold">
               <thead>
                 <tr>
-                  <th className="col-1">Código#</th>
                   <th className="col-3"></th>
                   <th className="col-3">Nombre</th>
                   <th className="col-1">Cantidad</th>
@@ -53,7 +53,6 @@ export default function ModalCart() {
                 {products.map((product) => {
                   return (
                     <tr className="" key={product.id}>
-                      <td className="p-4">{product.id}</td>
                       <td className="p-1">
                         <img
                           className="w-50 "

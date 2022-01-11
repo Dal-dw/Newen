@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 import Cart from "./Cart";
 import GoToCart from "./GoToCart";
 import CartContext from "../context/CartContext";
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 
 export default function ItemDetail({ data }) {
   const [toggleButton, setToggleButton] = useState(false);
-  const { id } = useParams();
+  //const { id } = useParams();
 
   const [itemCart, setItemCart] = useState({
     id: data.id,

@@ -4,6 +4,7 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  console.log("YYYYY", products);
 
   const addProducts = (product) => {
     const exist = products.find((x) => x.id === product.id);

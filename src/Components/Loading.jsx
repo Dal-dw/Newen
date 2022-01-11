@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 
 export default function Loading() {
-  const { theme, changeTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <div
       className={theme === false ? "bg-default " : "  bg-dark"}

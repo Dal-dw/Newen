@@ -16,11 +16,11 @@ export default function AppRouter() {
         <NaviBar />
         <Routes>
           <Route
-            path="/productos/remeras"
+            path="/productos/:categoria"
             element={<ItemList filter="Remeras" />}
           />
           <Route
-            path="/productos/gorras"
+            path="/productos/:categoria"
             element={<ItemList filter="Gorras" />}
           />
           <Route path="/cart" element={<Cart />} />

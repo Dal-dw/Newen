@@ -1,12 +1,12 @@
-import React, { useState, useContext } from "react";
-import { Modal, Button } from "react-bootstrap";
-import CartWidget from "./CartWidget";
+import React, { useContext } from "react";
+//import { Modal, Button } from "react-bootstrap";
+//import CartWidget from "./CartWidget";
 import { Table } from "react-bootstrap";
 import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
-  const [show, setShow] = useState(false);
+  //const [show, setShow] = useState(false);
 
   const { products, setProducts } = useContext(CartContext);
   const totalPrice = products.reduce((a, c) => a + c.price * c.amount, 0);
@@ -32,7 +32,6 @@ export default function Cart() {
           <Table hover className="text-center fw-bold">
             <thead>
               <tr>
-                <th className="col-1">Código#</th>
                 <th className="col-3"></th>
                 <th className="col-3">Nombre</th>
                 <th className="col-1">Cantidad</th>
@@ -43,7 +42,6 @@ export default function Cart() {
               {products.map((product) => {
                 return (
                   <tr className="" key={product.id}>
-                    <td className="p-4">{product.id}</td>
                     <td className="p-1">
                       <img
                         className="w-50 "
