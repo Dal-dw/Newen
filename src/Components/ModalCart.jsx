@@ -68,6 +68,7 @@ export default function ModalCart() {
                       <td className="p-4">
                         <h5>${product.price}</h5>
                       </td>
+                      <td></td>
                       <td className="p-3">
                         <button
                           id={product.id}

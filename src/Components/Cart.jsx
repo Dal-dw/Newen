@@ -4,12 +4,12 @@ import React, { useContext } from "react";
 import { Table } from "react-bootstrap";
 import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
+import BuyerData from "./BuyerData";
 
 export default function Cart() {
   //const [show, setShow] = useState(false);
 
-  const { products, setProducts } = useContext(CartContext);
-  const totalPrice = products.reduce((a, c) => a + c.price * c.amount, 0);
+  const { products, setProducts, totalPrice } = useContext(CartContext);
 
   const removeItem = (event) => {
     console.log(event.target.id);
@@ -50,6 +50,7 @@ export default function Cart() {
                         style={{ background: "rgba(255, 255, 255, 0, 1)" }}
                       />
                     </td>
+
                     <td className="p-4">
                       <h4>{product.name}</h4>
                     </td>
@@ -57,6 +58,7 @@ export default function Cart() {
                     <td className="p-4">
                       <h5>${product.price}</h5>
                     </td>
+                    <td></td>
                     <td className="p-3">
                       <button
                         id={product.id}
@@ -94,7 +96,11 @@ export default function Cart() {
                 <td></td>
                 <td></td>
                 <td>
-                  <button className="btn btn-success">PAGAR</button>{" "}
+                  <Link to="/buyerdata">
+                    <button className="btn btn-success">
+                      Finalizar compra
+                    </button>
+                  </Link>
                 </td>
               </tr>
             </tbody>
