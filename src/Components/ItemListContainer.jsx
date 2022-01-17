@@ -82,11 +82,14 @@ export default function ItemList(props) {
               : "d-flex justify-content-center bg-dark"
           }
         >
-          <div className="container row ">
+          <div className="container row  ">
             {products.map((product) => {
               return (
-                <div className="col-sm-12 col-md-6 col-xl-4 " key={product.id}>
-                  <div className="mx-1 ">
+                <div
+                  className="col-sm-12 col-md-6 col-lg-6 col-xl-4 "
+                  key={product.id}
+                >
+                  <div className="   ">
                     <ProductCard
                       id={product.id}
                       nombre={product.nombre}

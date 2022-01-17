@@ -3,8 +3,14 @@ import { createContext, useState } from "react";
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(
+    JSON.parse(localStorage.getItem("LocalCart"))
+  );
   console.log("YYYYY", products);
+  const addLocalStorage = (products) => {
+    localStorage.setItem("LocalCart", JSON.stringify(products));
+  };
+  addLocalStorage(products);
 
   const addProducts = (product) => {
     const exist = products.find((x) => x.id === product.id);
@@ -14,7 +20,7 @@ const CartProvider = ({ children }) => {
           x.id === product.id
             ? {
                 ...exist,
-                amount: exist.amount + product.amount,
+                amount: (exist.amount = product.amount),
               }
             : x
         )

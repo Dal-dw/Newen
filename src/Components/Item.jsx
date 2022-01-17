@@ -8,15 +8,15 @@ export default function Item(props) {
   //----------RETURN-------
 
   return (
-    <div className="d-flex  row col-9 m-5   ">
+    <div className="d-flex  row col-12 my-3   ">
       <div
         className=" col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"
         key={props.id}
       >
-        <Card style={{ width: "100%" }} className="p-1  ">
+        <Card style={{ width: "100%" }} className="  ">
           <Card.Body>
             <img
-              className="card-img-top border border-secondary"
+              className="card-img-top border border-secondary "
               src={`${process.env.PUBLIC_URL}/img/${props.img}`}
               alt="img"
             />

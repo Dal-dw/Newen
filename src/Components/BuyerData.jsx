@@ -1,10 +1,16 @@
 import React, { useState, useContext } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import CartContext from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 //firebase
 import db from "../firebase";
 import { collection, addDoc } from "firebase/firestore/lite";
+const mercadopago = require("mercadopago");
+// Agrega credenciales
+mercadopago.configure({
+  access_token: "PROD_ACCESS_TOKEN",
+});
 
 export default function BuyerData() {
   const [show, setShow] = useState(false);
@@ -63,7 +69,7 @@ export default function BuyerData() {
         {products.length === 0 ? (
           <div className="bg-info bg-opacity-25 d-flex justify-content-center align-items-center m-5">
             Felicidades! Tu orden fué registrada bajo el Nro: {nroOrden}
-            <button className="btn btn-success m-2">Ir a Mercado Libre</button>
+            <button className="btn btn-success m-2">Ir a Mercado Pago</button>
           </div>
         ) : (
           <div className="bg-info m-5 p-3 bg-opacity-25">
@@ -101,13 +107,15 @@ export default function BuyerData() {
                 />
               </Form.Group>
               <div className="d-flex justify-content-end ">
-                <Button
-                  variant="secondary"
-                  onClick={handleClose}
-                  className="m-1"
-                >
-                  Volver
-                </Button>
+                <Link to="/cart" className="text-decoration-none text-light">
+                  <Button
+                    variant="secondary"
+                    onClick={handleClose}
+                    className="m-1"
+                  >
+                    Volver
+                  </Button>
+                </Link>
 
                 <Button
                   type="button"

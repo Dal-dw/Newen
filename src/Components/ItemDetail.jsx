@@ -38,7 +38,7 @@ export default function ItemDetail({ data }) {
   //-------------------RETURN
 
   return (
-    <div className="col-12 p-3 col-sm-12  container ">
+    <div className="p-3 col-12">
       <Link to={`/productos/${data.categoria}`}>
         <button
           type="button"
@@ -47,22 +47,26 @@ export default function ItemDetail({ data }) {
           Volver
         </button>
       </Link>
-      <Card className="d-flex p-2  flex-row   " key={data.id}>
+      <Card
+        className="d-flex p-3 w-100  flex-md-row flex-sm-column   "
+        key={data.id}
+      >
         <Card.Img
-          className="border bg-light bg-opacity-10   p-4"
-          style={{ width: "100%" }}
+          className="border  bg-light bg-opacity-10   w-sm-100 w-md-50   p-4"
           src={`${process.env.PUBLIC_URL}/img/${data.img}`}
         />
-        <div className="p-3 " style={{ width: "100%" }}>
-          <Card.Title className="text-center text-success">
-            <h2>{data.nombre}</h2>
+        <div className="    w-100  ">
+          <Card.Title className="text-center text-success ">
+            <h1>{data.nombre}</h1>
           </Card.Title>
           <Card.Text className="text-center">
             Descripcion del Producto en cuestion
           </Card.Text>
-          <Card.Body className="card-body">
-            <ListGroup className="list-group-flush  ">
-              <ListGroupItem>PRECIO: $ {data.precio}</ListGroupItem>
+          <Card.Body className="card-body ">
+            <ListGroup className="list-group-flush    ">
+              <ListGroupItem>
+                <h2 className="text-secondary ">${data.precio}</h2>
+              </ListGroupItem>
               <ListGroupItem>Stock Disponible: {data.stock}</ListGroupItem>
               <ListGroupItem>TALLES</ListGroupItem>
             </ListGroup>
