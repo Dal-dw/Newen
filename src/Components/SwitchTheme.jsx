@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
 export default function SwitchTheme({ changeTheme }) {
+  // eslint-disable-next-line no-unused-vars
   const [checked, setChecked] = useState(false);
 
   const handleChange = (event) => {

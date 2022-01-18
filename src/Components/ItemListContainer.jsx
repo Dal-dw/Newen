@@ -16,7 +16,7 @@ export default function ItemList(props) {
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { theme, changeTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   // const getProducts = new Promise((resolve) => {
   //   setTimeout(() => {
@@ -56,6 +56,7 @@ export default function ItemList(props) {
     getProducts(db).then((resultProducts) => {
       setProducts(resultProducts);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoria]);
 
   //------------------RETURN----------------/ acà envío un prop desde el padre para filtrar los productos por categorìa osi es destacado y asì poder reutilizar este componente

@@ -11,7 +11,6 @@ export default function ModalCart() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { products, setProducts } = useContext(CartContext);
-  console.log("xxxxxxxxxxx", products);
 
   const totalPrice = products.reduce((a, c) => a + c.price * c.amount, 0);
 

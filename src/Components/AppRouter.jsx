@@ -8,7 +8,7 @@ import { CartProvider } from "../context/CartContext";
 
 import NaviBar from "./NaviBar";
 import NotFoundPage from "./NotFoundPage";
-import Success from "./Sucess";
+
 import BuyerData from "./BuyerData";
 
 export default function AppRouter() {

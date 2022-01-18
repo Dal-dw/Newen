@@ -14,7 +14,7 @@ export default function ItemDetail({ data }) {
   const [toggleButton, setToggleButton] = useState(false);
   //const { id } = useParams();
 
-  const [itemCart, setItemCart] = useState({
+  const [itemCart] = useState({
     id: data.id,
     name: data.nombre,
     amount: 1,
@@ -23,7 +23,7 @@ export default function ItemDetail({ data }) {
     price: data.precio,
   });
   console.log("amount: ", itemCart.amount);
-  const { addProducts, products } = useContext(CartContext);
+  const { addProducts } = useContext(CartContext);
 
   const onAdd = (value) => {
     itemCart.amount = value;

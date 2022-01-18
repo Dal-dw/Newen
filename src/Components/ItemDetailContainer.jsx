@@ -4,7 +4,6 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import ThemeContext from "../context/ThemeContext";
-import { Link } from "react-router-dom";
 
 import { doc, getDoc } from "firebase/firestore/lite";
 import db from "../firebase";
@@ -15,7 +14,7 @@ export default function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
 
   const [loading, setLoading] = useState(true);
-  const { theme, changeTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   async function getProduct(db) {
     const docRef = doc(db, "productos", id);
@@ -31,6 +30,7 @@ export default function ItemDetailContainer() {
   }
   useEffect(() => {
     getProduct(db);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   //const siguiente = id < DataProducts.length ? parseInt(id) + 1 : parseInt(id);

@@ -6,7 +6,7 @@ const CartProvider = ({ children }) => {
   const [products, setProducts] = useState(
     JSON.parse(localStorage.getItem("LocalCart"))
   );
-  console.log("YYYYY", products);
+
   const addLocalStorage = (products) => {
     localStorage.setItem("LocalCart", JSON.stringify(products));
   };

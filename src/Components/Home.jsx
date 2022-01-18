@@ -4,7 +4,7 @@ import ItemList from "./ItemListContainer";
 import ThemeContext from "../context/ThemeContext";
 
 export default function Home() {
-  const { theme, changeTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <div className={theme === false ? " bg-default " : " bg-dark "}>
       <div className="">

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ mercadopago.configure({
 });
 
 export default function BuyerData() {
-  const [show, setShow] = useState(false);
+  //const [ setShow] = useState(false);
   const { products, setProducts, totalPrice } = useContext(CartContext);
   const [nroOrden, setNroOrden] = useState();
 
@@ -23,8 +23,8 @@ export default function BuyerData() {
     mail: "",
   });
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  //const handleClose = () => setShow(false);
+  //const handleShow = () => setShow(true);
   //SUBMIT
 
   const handleSubmit = (e) => {
@@ -47,14 +47,6 @@ export default function BuyerData() {
 
     setNroOrden(agregarCompra.id);
     console.log(nroOrden);
-  };
-
-  const removeItem = (id) => {
-    const newCart = products.filter((product) => product.id !== id);
-    setProducts(newCart);
-  };
-  const clearCart = () => {
-    setProducts([]);
   };
 
   const handleChange = (e) => {
@@ -108,11 +100,7 @@ export default function BuyerData() {
               </Form.Group>
               <div className="d-flex justify-content-end ">
                 <Link to="/cart" className="text-decoration-none text-light">
-                  <Button
-                    variant="secondary"
-                    onClick={handleClose}
-                    className="m-1"
-                  >
+                  <Button variant="secondary" className="m-1">
                     Volver
                   </Button>
                 </Link>
