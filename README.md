@@ -19,21 +19,21 @@ El carrito tiene un Widget (con contador en el Navbar), una versión Modal al ha
 
 ## Extras y detalles
 
-El home cuenta con un listado filtrado por "Destacados"
+- El home cuenta con un listado filtrado por "Destacados"
 
-El ItemDetailContainer cuenta con un listado que filtra solo 3 productos de la misma categoría.
+- El ItemDetailContainer cuenta con un listado que filtra solo 3 productos de la misma categoría.
 
-Un Slider en Home.
+- Un Slider en Home.
 
-Dependiendo de la categoría de productos cambia la imagen de portada.
+- Dependiendo de la categoría de productos cambia la imagen de portada.
 
-Modo oscuro.
+- Modo oscuro.
 
-#Instalación
+# Instalación
 
-- First irem Clonar el repositorio utilizando el comando
+- Clonar el repositorio utilizando el comando
   git clone https://github.com/Dal-dw/Newen-LOPEZ.git
-- Second item Una vez dentro de la carpeta del proyecto instalare las dependencias utilizando el comando:
+- Una vez dentro de la carpeta del proyecto instalare las dependencias utilizando el comando:
   npm i
-- Third item Cuando haya terminado la instalación ejecutar el servidor local
+- Cuando haya terminado la instalación ejecutar el servidor local
   npm start
