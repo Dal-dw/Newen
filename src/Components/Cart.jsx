@@ -1,13 +1,9 @@
 import React, { useContext } from "react";
-//import { Modal, Button } from "react-bootstrap";
-//import CartWidget from "./CartWidget";
 import { Table } from "react-bootstrap";
 import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
-  //const [show, setShow] = useState(false);
-
   const { products, setProducts, totalPrice } = useContext(CartContext);
 
   const removeItem = (id) => {
@@ -19,7 +15,7 @@ export default function Cart() {
   };
 
   return (
-    <div className="container bg-info bg-opacity-25 text-dark text-center   col-sm-12 col-md-12 col-lg-12 my-3 ">
+    <div className="container bg-info bg-opacity-25 text-dark text-center animate__animated animate__fadeIn  col-sm-12 col-md-12 col-lg-12 my-3 ">
       <div className="container text-center text-light">
         {products.length === 0 ? (
           <h2 className="text-center">Carrito Vacío :(</h2>

@@ -20,7 +20,7 @@ const CartProvider = ({ children }) => {
           x.id === product.id
             ? {
                 ...exist,
-                amount: (exist.amount = product.amount),
+                amount: exist.amount + product.amount,
               }
             : x
         )

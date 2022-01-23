@@ -5,8 +5,6 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 export default function Item(props) {
-  //----------RETURN-------
-
   return (
     <div className="d-flex  row col-12 my-3   ">
       <div

@@ -1,75 +1,39 @@
-TIENDA DE ROPA
-Newen Brand - La Fuerza de la Naturaleza
+# TIENDA DE ROPA
+
+# Newen Brand - La Fuerza de la Naturaleza
 
 Proyecto e-commerce React Js - Dardo Andres Lopez.
 
-# Getting Started with Create React App
+# Descripción del proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Se trata de una tiene e-commerce inspirada en una ya existente, pero adaptada en estilo y funcionalidades a las consignas de la cursada.
+La tienda original fué creada en la plataforma "Tienda Nube" - https://newenbrand.com.ar/.
 
-## Available Scripts
+# Explicación del proyecto
 
-In the project directory, you can run:
+En relaciòn a los estilos decidí usar un framework de CSS para no distraer esfuerzo, a pesar de que me gusta trabajar en CSS, quería concentrar toda la atención en lo relacionado al funcionamiento de React. **bold text** Es por eso que no encerré en carpetas los componentes junto a un archivo CSS ya que en este caso no serìa necesario.
 
-### `npm start`
+La tienda funciona básicamente como el estándar, con un botón para agregar la cantidad del producto seleccionado y otro botón comprar, para sumarlo al "Carrito".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+El carrito tiene un Widget (con contador en el Navbar), una versión Modal al hacer click al widget y una versión a página completa para el paso de finalizar la compra.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Extras y detalles
 
-### `npm test`
+El home cuenta con un listado filtrado por "Destacados"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El ItemDetailContainer cuenta con un listado que filtra solo 3 productos de la misma categoría.
 
-### `npm run build`
+Un Slider en Home.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dependiendo de la categoría de productos cambia la imagen de portada.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Modo oscuro.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#Instalación
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- First irem Clonar el repositorio utilizando el comando
+  git clone https://github.com/Dal-dw/Newen-LOPEZ.git
+- Second item Una vez dentro de la carpeta del proyecto instalare las dependencias utilizando el comando:
+  npm i
+- Third item Cuando haya terminado la instalación ejecutar el servidor local
+  npm start

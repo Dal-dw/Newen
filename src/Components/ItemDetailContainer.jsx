@@ -7,11 +7,13 @@ import ThemeContext from "../context/ThemeContext";
 
 import { doc, getDoc } from "firebase/firestore/lite";
 import db from "../firebase";
+import ItemListRelated from "./ItemListRelated";
 
 export default function ItemDetailContainer() {
   const { id } = useParams();
 
   const [product, setProduct] = useState([]);
+  console.log(product.categoria);
 
   const [loading, setLoading] = useState(true);
   const { theme } = useContext(ThemeContext);
@@ -33,10 +35,6 @@ export default function ItemDetailContainer() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  //const siguiente = id < DataProducts.length ? parseInt(id) + 1 : parseInt(id);
-  //const anterior = id > 1 ? parseInt(id) - 1 : parseInt(id);
-
-  //-----RETURN------
   if (loading) {
     return (
       <div className="text-center">
@@ -45,24 +43,15 @@ export default function ItemDetailContainer() {
     );
   } else {
     return (
-      <div
-        className={theme === false ? "d-flex  p-1  bg-default" : " bg-dark p-1"}
-      >
-        {/* <Link className="d-flex text-decoration-none " to={`/${id}`}>
-          <button className="btn  btn-outline-secondary btn-block text-secondary my-5">
-            Producto anterior <br />
-            <i className="fas fa-angle-double-left"></i>
-          </button>
-        </Link> */}
-
-        <ItemDetail data={product} />
-
-        {/* <Link className="d-flex text-decoration-none " to={`/${id}`}>
-          <button className="btn  btn-outline-secondary btn-block text-secondary my-5 p">
-            Producto siguiente <br />
-            <i className="fas fa-angle-double-right"></i>
-          </button>
-        </Link> */}
+      <div>
+        <div
+          className={
+            theme === false ? "d-flex  p-1  bg-default" : " bg-dark p-1"
+          }
+        >
+          <ItemDetail data={product} />
+        </div>
+        <ItemListRelated categoria={product.categoria} />
       </div>
     );
   }
