@@ -22,8 +22,6 @@ export default function ModalCart() {
     setProducts([]);
   };
 
-  console.log("Items en el Carrito (CartContext):", products, products.length);
-
   return (
     <>
       <div variant="primary" onClick={handleShow}>

@@ -17,7 +17,7 @@ export default function NaviBar() {
         bg={theme === false ? "primary" : "dark"}
         expand="lg"
         variant="dark"
-        className="border border-secondary bg-opacity-50"
+        className="border border-secondary bg-opacity-50 "
       >
         <Container fluid>
           <Link to={`/`}>
@@ -46,23 +46,25 @@ export default function NaviBar() {
               >
                 <Navbar.Brand>Newen Brand</Navbar.Brand>
               </Link>
+
               <Link
                 href="#"
                 to="/productos/remeras"
-                className="text-decoration-none mx-1 p-1 "
+                className="text-decoration-none mx-1 mt-3 "
               >
                 Remeras
               </Link>
+
               <Link
                 href="#1"
                 to="/productos/gorras"
-                className="text-decoration-none mx-1 p-1"
+                className="text-decoration-none mx-1 mt-3"
               >
                 Gorras
               </Link>
 
-              <Nav.Link href="#3">Como comprar</Nav.Link>
-              <Nav.Link href="#4">Quienes somos</Nav.Link>
+              <span className="mx-1 mt-3">Como comprar</span>
+              <span className="mx-1 mt-3">Quienes somos</span>
             </Nav>
           </Navbar.Collapse>
         </Container>

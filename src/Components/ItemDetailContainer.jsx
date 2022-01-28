@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import ItemDetail from "./ItemDetail";
-//import DataProducts from "./products.json";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import ThemeContext from "../context/ThemeContext";
@@ -13,7 +12,6 @@ export default function ItemDetailContainer() {
   const { id } = useParams();
 
   const [product, setProduct] = useState([]);
-  console.log(product.categoria);
 
   const [loading, setLoading] = useState(true);
   const { theme } = useContext(ThemeContext);
@@ -27,11 +25,11 @@ export default function ItemDetailContainer() {
       setProduct(producto);
       setLoading(false);
     } else {
-      console.log("NO EXISTE");
     }
   }
   useEffect(() => {
     getProduct(db);
+    window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 

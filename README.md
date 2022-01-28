@@ -11,7 +11,7 @@ La tienda original fué creada en la plataforma "Tienda Nube" - https://newenbra
 
 # Explicación del proyecto
 
-En relaciòn a los estilos decidí usar un framework de CSS para no distraer esfuerzo, a pesar de que me gusta trabajar en CSS, quería concentrar toda la atención en lo relacionado al funcionamiento de React. ** Es por eso que no encerré en carpetas los componentes junto a un archivo CSS ya que en este caso no serìa necesario.**
+En relaciòn a los estilos decidí usar un framework de CSS para no distraer esfuerzo, a pesar de que me gusta trabajar en CSS, quería concentrar toda la atención en lo relacionado al funcionamiento de React. **Es por eso que no encerré en carpetas los componentes junto a un archivo CSS ya que en este caso no serìa necesario.**
 
 La tienda funciona básicamente como el estándar, con un botón para agregar la cantidad del producto seleccionado y otro botón comprar, para sumarlo al "Carrito".
 

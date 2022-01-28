@@ -11,10 +11,10 @@ export default function Item(props) {
         className=" col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"
         key={props.id}
       >
-        <Card style={{ width: "100%" }} className="  ">
+        <Card className="w-100">
           <Card.Body>
             <img
-              className="card-img-top border border-secondary "
+              className="card-img-top border border-secondary bg-success bg-opacity-10 "
               src={`${process.env.PUBLIC_URL}/img/${props.img}`}
               alt="img"
             />

@@ -20,7 +20,7 @@ export default function ItemDetail({ data }) {
     img: data.img,
     price: data.precio,
   });
-  console.log("amount: ", itemCart.amount);
+
   const { addProducts } = useContext(CartContext);
 
   const onAdd = (value) => {
@@ -51,33 +51,39 @@ export default function ItemDetail({ data }) {
           key={data.id}
         >
           <Card.Img
-            className="border  bg-light bg-opacity-10 m-3  w-75 h-75 p-3 "
+            className="border border-secondary  bg-light bg-opacity-10 m-3  w-75 h-75 p-3 "
             src={`${process.env.PUBLIC_URL}/img/${data.img}`}
           />
           <div className="    w-100  ">
             <Card.Title className="text-center ">
               <h1 className="text-success">{data.nombre}</h1>
             </Card.Title>
-            <Card.Text className="">
-              <p className="p-3 text-left">{data.descripcion}</p>
-            </Card.Text>
-            <Card.Body className="card-body ">
-              <ListGroup className="list-group-flush    ">
+            <Card.Body className="card-body  ">
+              <ListGroup className="list-group-flush border border-secondary                  ">
                 <ListGroupItem>
                   <h2 className="text-secondary ">${data.precio}</h2>
                 </ListGroupItem>
                 <ListGroupItem>Stock Disponible: {data.stock}</ListGroupItem>
-                <ListGroupItem>TALLES: S - M - L - XL - XXL </ListGroupItem>
+                <ListGroupItem>
+                  TALLES:{" "}
+                  <span className="border border-secondary p-1 mx-1">S</span>
+                  <span className="border border-secondary p-1 mx-1">M</span>
+                  <span className="border border-secondary p-1 mx-1">L</span>
+                  <span className="border border-secondary p-1 mx-1">XL</span>
+                  <span className="border border-secondary p-1 mx-1">XXL</span>
+                </ListGroupItem>
               </ListGroup>
             </Card.Body>
-            <Card.Body className="container col-5 text-center">
+
+            <Card.Body className=" text-center">
               {toggleButton === false ? (
-                <div>
+                <div className="d-flex">
                   <ItemCount data={data} onAdd={onAdd} />
+
                   <Button
                     variant="success"
                     id={"botonAgregar"}
-                    className=" d-flex col-12 justify-content-center p-2   boton"
+                    className=" d-flex w-100 justify-content-center h-50 mt-3 p-2   boton"
                     onClick={agregar}
                   >
                     Comprar
@@ -87,6 +93,9 @@ export default function ItemDetail({ data }) {
                 <GoToCart />
               )}
             </Card.Body>
+            <Card.Text className="p-3 m-3 border border-secondary text-left bg-primary bg-opacity-10">
+              {data.descripcion}
+            </Card.Text>
           </div>
         </Card>
         <div className="d-none">

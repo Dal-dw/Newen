@@ -25,8 +25,6 @@ const CartProvider = ({ children }) => {
             : x
         )
       );
-
-      console.log(product.price * product.amount);
     } else {
       setProducts([...products, { ...product, amount: product.amount }]);
     }

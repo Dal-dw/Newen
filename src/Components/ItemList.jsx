@@ -44,6 +44,7 @@ export default function ItemList(props) {
   useEffect(() => {
     getProducts(db).then((resultProducts) => {
       setProducts(resultProducts);
+      window.scrollTo(0, 0);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoria]);
@@ -59,9 +60,17 @@ export default function ItemList(props) {
       <div className="animate__animated animate__fadeIn">
         <div className="w-100 ">
           {categoria === "remeras" ? (
-            <img className="w-100" src={remeras} alt="" />
+            <img
+              className="w-100 h-50 border-bottom border-secondary   "
+              src={remeras}
+              alt="remeras"
+            />
           ) : (
-            <img className="w-100 " src={gorras} alt="" />
+            <img
+              className="w-100 border-bottom border-secondary  "
+              src={gorras}
+              alt="gorras"
+            />
           )}
         </div>
 

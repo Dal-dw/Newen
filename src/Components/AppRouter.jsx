@@ -17,18 +17,13 @@ export default function AppRouter() {
       <CartProvider>
         <NaviBar />
         <Routes>
-          <Route
-            path="/productos/:categoria"
-            element={<ItemList filter="Remeras" />}
-          />
-          <Route
-            path="/productos/:categoria"
-            element={<ItemList filter="Gorras" />}
-          />
+          <Route path="/productos/:categoria" element={<ItemList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFoundPage />} />
+
           <Route path="/:id" element={<ItemDetailContainer />} />
+
           <Route path="/buyerdata" element={<BuyerData />} />
         </Routes>
       </CartProvider>

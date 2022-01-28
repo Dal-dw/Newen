@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 
 export default function Footer() {
-  const { theme, changeTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <footer id="footer" className="">
       <div
@@ -20,7 +20,7 @@ export default function Footer() {
                 <h5 className="widget-title">
                   Newen Brand<span></span>
                 </h5>
-                <p>La fuerza de la Naturaleza </p>
+                La fuerza de la Naturaleza
               </div>
             </div>
 
@@ -60,7 +60,7 @@ export default function Footer() {
                 <h5 className="widget-title">
                   MEDIOS DE PAGO<span></span>
                 </h5>
-                <p>Mercado Pago - Transferencia Bancaria</p>
+                Mercado Pago - Transferencia Bancaria
               </div>
             </div>
 
@@ -70,18 +70,13 @@ export default function Footer() {
                   Redes<span></span>
                 </h5>
 
-                <p>
-                  <a href="mailto:info@domain.com" title="glorythemes">
-                    newenteesbrand@gmail.com
-                  </a>
-                </p>
+                <a href="mailto:info@domain.com" title="glorythemes">
+                  newenbrand@gmail.com
+                </a>
+
                 <ul className="social-footer2">
                   <li className="">
-                    <a
-                      title="youtube"
-                      target="_blank"
-                      href="https://bit.ly/3m9avif"
-                    >
+                    <a title="youtube" href="https://bit.ly/3m9avif">
                       <img
                         alt="youtube"
                         width="30"
@@ -91,11 +86,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li className="">
-                    <a
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                      title="Facebook"
-                    >
+                    <a href="https://www.facebook.com/" title="Facebook">
                       <img
                         alt="Facebook"
                         width="30"
@@ -105,11 +96,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li className="">
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      title="Twitter"
-                    >
+                    <a href="https://twitter.com" title="Twitter">
                       <img
                         alt="Twitter"
                         width="30"
@@ -119,11 +106,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li className="">
-                    <a
-                      title="instagram"
-                      target="_blank"
-                      href="https://www.instagram.com/"
-                    >
+                    <a title="instagram" href="https://www.instagram.com/">
                       <img
                         alt="instagram"
                         width="30"
@@ -143,7 +126,7 @@ export default function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center ">
-              <p>Copyright © 2022. All rights reserved.</p>
+              Copyright © 2022. All rights reserved.
             </div>
           </div>
         </div>

@@ -36,7 +36,6 @@ export default function BuyerData() {
     compra.total = totalPrice;
     compra.fecha = date;
     pushCompra(compra);
-    console.log("compra", compra);
 
     setProducts([]);
   };
@@ -46,7 +45,6 @@ export default function BuyerData() {
     const agregarCompra = await addDoc(compraFirebase, compra);
 
     setNroOrden(agregarCompra.id);
-    console.log(nroOrden);
   };
 
   const handleChange = (e) => {
