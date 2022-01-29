@@ -6,11 +6,6 @@ import { Link } from "react-router-dom";
 //firebase
 import db from "../firebase";
 import { collection, addDoc } from "firebase/firestore/lite";
-const mercadopago = require("mercadopago");
-// Agrega credenciales
-mercadopago.configure({
-  access_token: "PROD_ACCESS_TOKEN",
-});
 
 export default function BuyerData() {
   //const [ setShow] = useState(false);
@@ -59,7 +54,7 @@ export default function BuyerData() {
           </div>
         ) : (
           <div className="bg-info m-5 p-3 bg-opacity-25">
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="email">
                 <Form.Label>Email </Form.Label>
                 <Form.Control
@@ -92,21 +87,18 @@ export default function BuyerData() {
                   onChange={handleChange}
                 />
               </Form.Group>
+
               <div className="d-flex justify-content-end ">
                 <Link to="/cart" className="text-decoration-none text-light">
                   <Button variant="secondary" className="m-1">
                     Volver
                   </Button>
                 </Link>
-
-                <Button
-                  type="button"
-                  variant="success"
-                  onClick={handleSubmit}
-                  className="m-1"
-                >
-                  Pagar
-                </Button>
+                <Form.Group>
+                  <Button type="submit" variant="success" className="m-1">
+                    Pagar
+                  </Button>
+                </Form.Group>
               </div>
             </Form>
           </div>

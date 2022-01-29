@@ -6,7 +6,7 @@ Proyecto e-commerce React Js - Dardo Andres Lopez.
 
 # Descripción del proyecto
 
-Se trata de una tiene e-commerce inspirada en una ya existente, pero adaptada en estilo y funcionalidades a las consignas de la cursada.
+Se trata de una tienda e-commerce inspirada en una ya existente, pero adaptada en estilo y funcionalidades a las consignas de la cursada.
 La tienda original fué creada en la plataforma "Tienda Nube" - https://newenbrand.com.ar/.
 
 # Explicación del proyecto

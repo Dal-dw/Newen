@@ -4,7 +4,7 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [products, setProducts] = useState(
-    JSON.parse(localStorage.getItem("LocalCart"))
+    JSON.parse(localStorage.getItem("LocalCart")) || []
   );
 
   const addLocalStorage = (products) => {
