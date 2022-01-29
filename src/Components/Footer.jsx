@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import { Link } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
                 <h5 className="widget-title">
                   Newen Brand<span></span>
                 </h5>
-                La fuerza de la Naturaleza
+                "La fuerza de la Naturaleza"
               </div>
             </div>
 
@@ -31,25 +31,41 @@ export default function Footer() {
                 </h5>
                 <ul className="thumbnail-widget">
                   <li>
-                    <div className="thumb-content">
-                      <a href="#.">Remeras</a>
-                    </div>
+                    <Link
+                      href="#1"
+                      to="/productos/remeras"
+                      className="text-decoration-none mx-1 mt-3"
+                    >
+                      Remeras
+                    </Link>
                   </li>
                   <li>
-                    <div className="thumb-content">
-                      <a href="#.">Gorras</a>
-                    </div>
+                    <Link
+                      href="#1"
+                      to="/productos/gorras"
+                      className="text-decoration-none mx-1 mt-3"
+                    >
+                      Gorras
+                    </Link>
                   </li>
 
                   <li>
-                    <div className="thumb-content">
-                      <a href="#.">Cómo comprar</a>
-                    </div>
+                    <Link
+                      href="#1"
+                      to="/ref"
+                      className="text-decoration-none mx-1 mt-3"
+                    >
+                      Como comprar
+                    </Link>
                   </li>
                   <li>
-                    <div className="thumb-content">
-                      <a href="#.">Quienes somos</a>
-                    </div>
+                    <Link
+                      href="#1"
+                      to="/ref"
+                      className="text-decoration-none mx-1 mt-3"
+                    >
+                      Quienes somos
+                    </Link>
                   </li>
                 </ul>
               </div>

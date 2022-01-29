@@ -63,8 +63,20 @@ export default function NaviBar() {
                 Gorras
               </Link>
 
-              <span className="mx-1 mt-3">Como comprar</span>
-              <span className="mx-1 mt-3">Quienes somos</span>
+              <Link
+                href="#1"
+                to="/ref"
+                className="text-decoration-none mx-1 mt-3"
+              >
+                Como comprar
+              </Link>
+              <Link
+                href="#1"
+                to="/ref"
+                className="text-decoration-none mx-1 mt-3"
+              >
+                Quienes somos
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

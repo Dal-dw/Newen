@@ -23,10 +23,6 @@ export default function BuyerData() {
     mail: "",
   });
 
-  //const handleClose = () => setShow(false);
-  //const handleShow = () => setShow(true);
-  //SUBMIT
-
   const handleSubmit = (e) => {
     e.preventDefault();
     var date = { currentTime: new Date().toLocaleString() };
@@ -58,7 +54,7 @@ export default function BuyerData() {
       <div>
         {products.length === 0 ? (
           <div className="bg-info bg-opacity-25 d-flex justify-content-center align-items-center m-5">
-            Felicidades! Tu orden fué registrada bajo el Nro: {nroOrden}
+            Felicidades! Tu orden fué registrada bajo el ID: {nroOrden}
             <button className="btn btn-success m-2">Ir a Mercado Pago</button>
           </div>
         ) : (

@@ -10,6 +10,7 @@ import NaviBar from "./NaviBar";
 import NotFoundPage from "./NotFoundPage";
 
 import BuyerData from "./BuyerData";
+import Default from "./Default";
 
 export default function AppRouter() {
   return (
@@ -25,6 +26,7 @@ export default function AppRouter() {
           <Route path="/:id" element={<ItemDetailContainer />} />
 
           <Route path="/buyerdata" element={<BuyerData />} />
+          <Route path="/ref" element={<Default />} />
         </Routes>
       </CartProvider>
       <Footer />
