@@ -23,11 +23,11 @@ export default function Cart() {
           <div>
             {products.map((product) => {
               return (
-                <div className="d-flex flex-column align-items-center ">
-                  <ul
-                    className="list-group bg-info bg-opacity-25 p-3 p-3   my-1 "
-                    key={product.id}
-                  >
+                <div
+                  className="d-flex flex-column align-items-center "
+                  key={product.id}
+                >
+                  <ul className="list-group bg-info bg-opacity-25 p-3 p-3   my-1 ">
                     <li className="list-group-item">
                       <img
                         className=" border border-light bg-dark bg-opacity-10"

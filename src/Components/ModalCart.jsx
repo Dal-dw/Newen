@@ -37,13 +37,10 @@ export default function ModalCart() {
           <h2 className="text-center p-3">El Carrito está vacío :(</h2>
         ) : (
           <Modal.Body className="bg-info bg-opacity-25">
-            {products.map((product) => {
+            {products.map((product, key) => {
               return (
-                <div>
-                  <ul
-                    className="list-group bg-dark bg-opacity-25 p-3  m-1 d-flex"
-                    key={product.id}
-                  >
+                <div key={product.id}>
+                  <ul className="list-group bg-dark bg-opacity-25 p-3  m-1 d-flex">
                     <li className="list-group-item">
                       <img
                         className="w-100 border border-light bg-dark bg-opacity-10"

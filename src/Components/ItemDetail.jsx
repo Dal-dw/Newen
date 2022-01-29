@@ -66,11 +66,21 @@ export default function ItemDetail({ data }) {
                 <ListGroupItem>Stock Disponible: {data.stock}</ListGroupItem>
                 <ListGroupItem>
                   TALLES:{" "}
-                  <span className="border border-secondary p-1 mx-1">S</span>
-                  <span className="border border-secondary p-1 mx-1">M</span>
-                  <span className="border border-secondary p-1 mx-1">L</span>
-                  <span className="border border-secondary p-1 mx-1">XL</span>
-                  <span className="border border-secondary p-1 mx-1">XXL</span>
+                  <span className="border border-secondary p-1 mx-1 bg-light bg-opacity-25">
+                    S
+                  </span>
+                  <span className="border border-secondary p-1 mx-1 bg-light bg-opacity-25">
+                    M
+                  </span>
+                  <span className="border border-secondary p-1 mx-1 bg-light bg-opacity-25">
+                    L
+                  </span>
+                  <span className="border border-secondary p-1 mx-1 bg-light bg-opacity-25">
+                    XL
+                  </span>
+                  <span className="border border-secondary p-1 mx-1 bg-light bg-opacity-25">
+                    XXL
+                  </span>
                 </ListGroupItem>
               </ListGroup>
             </Card.Body>
