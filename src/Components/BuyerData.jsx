@@ -8,14 +8,16 @@ import db from "../firebase";
 import { collection, addDoc } from "firebase/firestore/lite";
 
 export default function BuyerData() {
-  //const [ setShow] = useState(false);
   const { products, setProducts, totalPrice } = useContext(CartContext);
   const [nroOrden, setNroOrden] = useState();
+
+  const [email, setEmail] = useState("");
+  const [emailConfirm, setEmailConfirm] = useState("");
 
   const [buyerData, setBuyerData] = useState({
     telefono: "",
     nombre: "",
-    mail: "",
+    email: "",
   });
 
   const handleSubmit = (e) => {
@@ -44,6 +46,11 @@ export default function BuyerData() {
     setBuyerData({ ...buyerData, [name]: value });
   };
 
+  const handleKeyUp = (e) => {
+    setEmail(buyerData.email);
+    setEmailConfirm(buyerData.confirmEmail);
+  };
+
   return (
     <>
       <div>
@@ -55,15 +62,51 @@ export default function BuyerData() {
         ) : (
           <div className="bg-info m-5 p-3 bg-opacity-25">
             <Form onSubmit={handleSubmit}>
+              {email === emailConfirm ? (
+                <Form.Group className="mb-3" controlId="email">
+                  <Form.Label>Email </Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    onKeyUp={handleKeyUp}
+                    autoComplete="off"
+                    required
+                  />
+
+                  <Form.Text className="text-muted"></Form.Text>
+                </Form.Group>
+              ) : (
+                <Form.Group className="mb-3" controlId="email">
+                  <Form.Label>Email </Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    onKeyUp={handleKeyUp}
+                    autoComplete="off"
+                    className="border-danger"
+                    required
+                  />
+
+                  <Form.Text className="text-muted"></Form.Text>
+                </Form.Group>
+              )}
+
               <Form.Group className="mb-3" controlId="email">
-                <Form.Label>Email </Form.Label>
+                <Form.Label>Confirmar Email </Form.Label>
                 <Form.Control
                   type="email"
-                  name="mail"
+                  name="confirmEmail"
                   placeholder="Email"
-                  value={buyerData.mail}
                   onChange={handleChange}
+                  onKeyUp={handleKeyUp}
+                  autoComplete="off"
+                  required
                 />
+
                 <Form.Text className="text-muted"></Form.Text>
               </Form.Group>
 
@@ -75,6 +118,8 @@ export default function BuyerData() {
                   name="nombre"
                   value={buyerData.nombre}
                   onChange={handleChange}
+                  autoComplete="off"
+                  required
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="telefono">
@@ -85,6 +130,8 @@ export default function BuyerData() {
                   name="telefono"
                   value={buyerData.telefono}
                   onChange={handleChange}
+                  autoComplete="off"
+                  required
                 />
               </Form.Group>
 
@@ -94,11 +141,24 @@ export default function BuyerData() {
                     Volver
                   </Button>
                 </Link>
-                <Form.Group>
-                  <Button type="submit" variant="success" className="m-1">
-                    Pagar
-                  </Button>
-                </Form.Group>
+                {email === emailConfirm ? (
+                  <Form.Group>
+                    <Button type="submit" variant="success" className="m-1">
+                      Pagar
+                    </Button>
+                  </Form.Group>
+                ) : (
+                  <Form.Group>
+                    <Button
+                      type="submit"
+                      variant="secondary"
+                      className="m-1"
+                      disabled
+                    >
+                      Pagar
+                    </Button>
+                  </Form.Group>
+                )}
               </div>
             </Form>
           </div>

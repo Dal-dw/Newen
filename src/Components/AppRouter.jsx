@@ -5,10 +5,8 @@ import Home from "./Home";
 import ItemDetailContainer from "./ItemDetailContainer";
 import ItemList from "./ItemListContainer";
 import { CartProvider } from "../context/CartContext";
-
 import NaviBar from "./NaviBar";
 import NotFoundPage from "./NotFoundPage";
-
 import BuyerData from "./BuyerData";
 import Default from "./Default";
 

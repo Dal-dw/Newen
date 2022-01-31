@@ -39,6 +39,10 @@ El carrito tiene un Widget (con contador en el Navbar), una versión Modal al ha
 
 - Scroll to top automático al cambiar de página.
 
+# IMPORTANTE
+
+- Agregué dos capturas de Firebase donde se puede ver tanto una orden como un ejemplo de como está cargado cada producto.
+
 # Instalación
 
 - Clonar el repositorio utilizando el comando
